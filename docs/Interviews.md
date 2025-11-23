@@ -27,3 +27,12 @@ FR-2.2: The system shall display progress analytics such as charts and PR histor
 FR-2.3: The system shall support goal creation and progress tracking.
 FR-2.4: The system shall trigger reminder notifications after periods of inactivity.
 FR-1.6: The system shall allow users to update account and privacy settings.
+
+
+11/23/2025
+
+As part of my testing and review responsibilities, I contributed to refining the application’s interface, providing detailed feedback on the homepage, registration form, and dashboard to enhance usability, clarity, and user interaction. For the homepage, I recommended including essential elements such as Email or Phone Number, Password, Log In, Forgot Account?, Create New Account, and ensuring clear navigation for both returning and new users.
+
+For the registration form, I suggested a user-friendly layout with Create a New Account, It’s Quick and Easy, First Name, Last Name, Birthday, Gender (Female, Male, Custom), Mobile Number or Email, New Password, Sign Up, Already Have an Account?, and the QC Front and Back ID photos to streamline identity verification.
+
+I collaborated with Thasneemsha to review these UI components, identifying potential usability issues and improvements. In today’s meeting with Bryan, I provided solutions to optimize navigation and structure, documented feedback, and ensured designs aligned with functional requirements. These contributions guided the team toward a consistent, user-focused, and secure interface, with recommendations for usability testing and responsive design validation.
