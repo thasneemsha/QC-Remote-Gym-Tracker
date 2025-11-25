@@ -1,0 +1,24 @@
+Kan-ban board for managing tasks, progress, sprints, and blockers for the QFit Universal Workout Tracker final project.
+
+TO-DO LIST 
+
+Implement Login Servlet
+Implement Registration Servlet
+Connect UI → Servlet parameters
+Set up database schema (users, workouts) Design Member Dashboard Create HTML layout for workout logging Configure WAR deployment for AWS Validate QC ID upload feature
+
+
+In Progress
+
+Workout Logging Servlet (Bryan)
+UI layout adjustments (Ali)
+Front-end input fields (Thasneem)
+Servlet & JSP mapping (Sonu + Bryan)
+
+Done
+
+Homepage UI
+Login UI
+Registration UI
+AWS instance setup
+Servlet scaffolding in Eclipse
