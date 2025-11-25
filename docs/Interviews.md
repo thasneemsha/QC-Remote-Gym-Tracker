@@ -1,150 +1,38 @@
-# Stakeholder Interviews
+User Interview Summary
 
-This document summarizes interviews conducted with primary stakeholders to understand their expectations and needs for the QFit Universal Workout Tracker.
+The interviewed gym users emphasized that their top priorities are simplicity and speed. Students often work out between classes and want a workout tracker that requires minimal typing and feels quick to use. Many mentioned that complicated fitness apps discourage consistent logging.
 
----
+Users also expressed the need for a clean, straightforward logging flow where they can easily enter exercise name, sets, reps, weight, and optional notes without navigating multiple screens.
 
-## A. USER (Gym-Goer / Student)
+A recurring theme was the importance of visual progress. Users stay more motivated when they can clearly see improvements over time. They requested simple charts such as weekly training volume, personal records (PRs), and strength progression lines.
 
-**Motivation:**  
-The user seeks to stay consistent with their fitness routine and track strength improvements over time.
+Many students struggle with consistency, especially during exam weeks, and said that optional inactivity reminders would help them stay on track without feeling intrusive.
 
-**Interview Highlights:**
-- Works out 3–4 times per week.
-- Records exercise details including sets, reps, weight, and notes.
-- Desires a progress dashboard showing weekly volume, personal records (PRs), and weight progression.
-- Would benefit from reminders when inactive for several days.
-- Prioritizes goal-setting (e.g., benching 135 lbs, squatting 225 lbs).
-- Prefers a simple layout with detailed analytics available when needed.
+Goal-setting was also important. Users set personal strength targets and want the app to help them create and track these goals easily.
 
-**Identified Requirements:**
-- SR-1.1: Track workouts anywhere  
-- SR-1.2: View progress charts  
-- SR-1.3: Set fitness goals  
-- SR-1.4: Manage account settings  
+Finally, users highlighted privacy. They want full control over their workout history and prefer their data to remain private unless they choose to share it.
 
----
+Identified Stakeholder Requirements
 
-## B. COACH (Peer Coach / Trainer)
+SR-1.1: The system shall allow users to log workouts quickly and easily.
+SR-1.2: The system shall provide visual progress charts (volume, PRs, trends).
+SR-1.3: The system shall allow users to set and track fitness goals.
+SR-1.4: The system shall send optional inactivity reminders.
+SR-1.5: The system shall maintain user privacy and allow users to control data visibility.
 
-**Motivation:**  
-The coach uses client data to provide informed feedback and guide improvements in performance.
+Mapped Functional Requirements
 
-**Interview Highlights:**
-- Reviews workout data once or twice a week.
-- Tracks volume, frequency, and performance of major lifts.
-- Prefers trends and progress over one-time metrics.
-- Values a centralized dashboard to view all trainees.
-- Provides feedback on form, workload, and progression.
+FR-2.1: The system shall allow users to create and save workout entries.
+FR-2.2: The system shall display progress analytics such as charts and PR history.
+FR-2.3: The system shall support goal creation and progress tracking.
+FR-2.4: The system shall trigger reminder notifications after periods of inactivity.
+FR-1.6: The system shall allow users to update account and privacy settings.
 
-**Identified Requirements:**
-- SR-2.1: View users’ workout history  
-- SR-2.2: Analyze progress remotely  
-- SR-2.3: Provide feedback and recommendations  
 
----
+11/23/2025
 
-## C. ADMIN (System Manager / Developer)
+As part of my testing and review responsibilities, I contributed to refining the application’s interface, providing detailed feedback on the homepage, registration form, and dashboard to enhance usability, clarity, and user interaction. For the homepage, I recommended including essential elements such as Email or Phone Number, Password, Log In, Forgot Account?, Create New Account, and ensuring clear navigation for both returning and new users.
 
-**Motivation:**  
-The admin is responsible for managing system users, roles, and system maintenance tasks.
+For the registration form, I suggested a user-friendly layout with Create a New Account, It’s Quick and Easy, First Name, Last Name, Birthday, Gender (Female, Male, Custom), Mobile Number or Email, New Password, Sign Up, Already Have an Account?, and the QC Front and Back ID photos to streamline identity verification.
 
-**Interview Highlights:**
-- Manages user accounts, roles, and subscription statuses.
-- Needs access to system metrics and activity logs.
-- Requires tools to deactivate inactive accounts.
-- Monitors active users and total logged workouts.
-- Tracks system usage patterns for optimization.
-
-**Identified Requirements:**
-- SR-3.1: Manage users and roles  
-- SR-4.1: Authenticate users  
-- SR-4.3: Generate analytics  
-
----
-
-## Full Interview Transcript (Appendix)
-
-This section shows the raw questions and responses obtained during interviews.
-
-### 1. User Interview (Gym Member)
-
-**Q1:** How often do you work out and what motivates you to track your progress?  
-**A:** “I go to the gym 3–4 times a week. I want to see if I’m getting stronger and staying consistent.”
-
-**Q2:** What information do you usually record during a workout?  
-**A:** “Exercise name, sets, reps, and weight. Sometimes I add notes like ‘felt heavy’ or ‘increase next week.’”
-
-**Q3:** What type of progress data would you like to see on your dashboard?  
-**A:** “Weekly volume, PR progress, and a graph that shows how much weight I’ve added over time.”
-
-**Q4:** Would reminders help you stay consistent with your training?  
-**A:** “Yes. A notification after 3–4 days of no workouts would help keep me on track.”
-
-**Q5:** How important is goal-setting in your fitness routine?  
-**A:** “Very important. I try to set strength goals like benching 135 or squatting 225.”
-
-**Q6:** Would you be willing to pay for advanced analytics or coach feedback?  
-**A:** “If it’s affordable for students, like $2–3 a month, yes.”
-
-**Q7:** Do you prefer simple interfaces or more detailed analytics?  
-**A:** “Simple layout, but detailed analytics available when I click deeper.”
-
-**Q8:** What feature would make you use this app daily?  
-**A:** “A clean workout logging form and charts that update immediately after I save a workout.”
-
----
-
-### 2. Coach Interview (Peer Trainer / Fitness Club Member)
-
-**Q1:** What information is essential for you to evaluate a student’s workout performance?  
-**A:** “Total volume, frequency, and the main lifts (bench, squat, deadlift).”
-
-**Q2:** How often would you review your assigned students’ workouts?  
-**A:** “Probably once or twice a week.”
-
-**Q3:** What type of chart or data visualization helps you most?  
-**A:** “A volume-over-time chart and a trending 1RM estimate are super helpful.”
-
-**Q4:** What kind of feedback do you usually give your trainees?  
-**A:** “Things like adjusting weight, improving form, or increasing sets gradually.”
-
-**Q5:** What makes feedback most effective for students?  
-**A:** “Clear, specific comments tied to individual workouts.”
-
-**Q6:** Would you prefer one central dashboard listing all trainees?  
-**A:** “Yes, a table with each student’s last workout date and consistency score.”
-
-**Q7:** How important is it to see trends instead of single workout data?  
-**A:** “Very important. Trends show improvement or plateau over weeks, not just one session.”
-
-**Q8:** How can the app make your job easier as a student coach?  
-**A:** “A quick way to leave feedback and a clean timeline of each student’s progress.”
-
----
-
-### 3. Admin Interview (System Manager / Developer)
-
-**Q1:** What information do you need to manage users effectively?  
-**A:** “Name, email, role (Member/Coach/Admin), account status, subscription status.”
-
-**Q2:** What administrative tasks do you perform most frequently?  
-**A:** “Activating accounts, changing roles, and checking subscription status.”
-
-**Q3:** Should the Admin be able to deactivate users? Why?  
-**A:** “Yes, for maintaining security and removing inactive or unused accounts.”
-
-**Q4:** What statistics would help you monitor the system?  
-**A:** “Number of active users, total workouts logged, weekly activity trends.”
-
-**Q5:** How important is a clean UI for Admin tasks?  
-**A:** “Very important — it makes it easier to manage a large user list.”
-
-**Q6:** Should Admins see usage patterns (e.g., which pages are most used)?  
-**A:** “Yes, that helps understand which features students find useful.”
-
-**Q7:** How should Admin handle subscription (Premium) users?  
-**A:** “Admins should see their renewal dates and assign or remove Premium manually if needed.”
-
-**Q8:** What would help you maintain the app better over time?  
-**A:** “Logs of user activity, error logs, and tools to view system health.”
+I collaborated with Thasneemsha to review these UI components, identifying potential usability issues and improvements. In today’s meeting with Bryan, I provided solutions to optimize navigation and structure, documented feedback, and ensured designs aligned with functional requirements. These contributions guided the team toward a consistent, user-focused, and secure interface, with recommendations for usability testing and responsive design validation.
