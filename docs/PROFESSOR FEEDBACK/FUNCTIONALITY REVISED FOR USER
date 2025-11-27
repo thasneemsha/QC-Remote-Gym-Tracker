@@ -1,0 +1,40 @@
+## FR-1: User Functional Requirements
+
+### FR1.1 – User Registration
+The system shall allow users to register with email and password.
+
+### FR1.2 – Validate Registration Inputs
+The system shall validate all registration fields before creating an account.
+
+### FR1.3 – Secure Credential Storage
+The system shall securely store user passwords using hashing.
+
+### FR1.4 – User Login
+The system shall allow users to log in using their email and password.
+
+### FR1.5 – Validate Login Credentials
+The system shall validate login attempts and reject invalid credentials.
+
+### FR1.6 – Profile Management (UI + API)
+The system shall allow users to update their profile information and password.
+This functionality shall also be available through authenticated API endpoints.
+
+### FR1.7 – Log Workout (UI + API)
+Users shall be able to log exercises, sets, reps, weight, notes via JSP.
+The system shall also provide a POST API endpoint for logging workouts.
+
+### FR1.8 – View Workout History (UI + API)
+Users shall view past workouts on the dashboard.
+The system shall also provide an API endpoint that returns workout history in JSON.
+
+### FR1.9 – View Progress & Analytics (API-backed)
+The system shall generate progress graphs using data from API endpoints.
+
+### FR1.10 – View Coach Feedback (UI + API)
+Users shall view feedback submitted by coaches, retrievable through a feedback API endpoint.
+
+### FR1.11 – Secure Data Access
+Users shall only be able to access their own personal data and workout history through authenticated API calls.
+
+
+
