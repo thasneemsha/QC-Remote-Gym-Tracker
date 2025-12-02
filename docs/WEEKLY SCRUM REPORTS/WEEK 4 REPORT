@@ -1,0 +1,79 @@
+## Sprint 4 – Development Phase 
+**Duration:** Week 4 
+**Goal:** Begin implementing core system features, coordinate backend–frontend integration, configure AWS environment, and review UI progress to support upcoming integration tasks.
+ 
+---
+ 
+### **Scrum Meeting – 11/24/25 (Week 4)** 
+**Attendees:** Sonu, Bryan, Thasneem, Ali
+ 
+---
+ 
+### **Sprint Goal**
+Start implementation tasks, verify AWS deployment readiness, align UI with backend servlet requirements, and document all team contributions for development continuity.
+ 
+---
+ 
+### **Contributions**
+ 
+#### **Sonu**
+- Recorded weekly Scrum notes and maintained documentation
+- Ensured team alignment with Sprint goals
+- Coordinated servlet–JSP planning with Bryan (routes, parameters, workflow)
+- Reviewed GitHub updates for consistency
+- Identified blockers such as UI delays and parameter mismatches
+- Ensured alignment between JSP form fields and servlet expectations
+ 
+#### **Bryan**
+- Verified AWS EC2 configuration (Apache + Tomcat operational)
+- Checked firewall rules, port access, and external reachability
+- Identified reusable elements from Assignment 2 deployment pipeline
+- Developed initial Workout Logging Servlet ahead of schedule
+- Outlined servlet-to-database integration tasks for next sprint
+ 
+#### **Thasneem**
+- Completed Homepage, Login Page, and Registration Page UI
+- Implemented user onboarding fields (Email/Phone, Password, Gender, Birthday, etc.)
+- Organized page layout for clarity and usability
+- Created GitHub feature branches for all team members
+ 
+#### **Ali**
+- Reviewed all UI pages for usability and layout quality
+- Suggested improvements for field grouping, navigation, and clarity
+- Recommended QC ID verification fields and layout adjustments
+- Documented issues and enhancement notes
+- Provided structured feedback during team review meeting
+ 
+---
+ 
+### **Product Backlog Items Completed**
+- Confirm AWS environment functionality
+- Create initial Workout Logging Servlet
+- Develop Homepage, Login, and Registration pages
+- Complete UI review and documentation
+- Finalize servlet–JSP planning for integration
+ 
+---
+ 
+### **Product Backlog Items In Progress**
+- Mapping UI fields to servlet parameters
+- Designing workflow for Workout Logging → database insertion
+- Enhancing HTML structure and preparing Bootstrap integration
+- Conducting early UI/UX validation
+ 
+---
+ 
+### **Product Backlog Items For Next Sprint**
+- Integrate Workout Logging Servlet with database schema
+- Connect Login, Registration, and Logging pages to backend servlets
+- Begin development of Member Dashboard
+- Prepare WAR deployment pipeline for AWS
+- Implement validation and error handling
+ 
+---
+ 
+### **Issues / Risks**
+- Backend–UI integration depends on JSP completion
+- Parameter mismatches may delay testing
+- Dashboard layout pending final approval
+- AWS deployment requires stable merges into dev branch
