@@ -1,75 +1,69 @@
-# QFit – Validation Traceability Matrix
-
-## 1. Environment / Installation
-
-| Serial | Use Case ID | Test Case ID | Description                                                  | Expected Outcome                                              | Related FR |
-|--------|-------------|--------------|--------------------------------------------------------------|----------------------------------------------------------------|------------|
-| 1      | UC-INST     | TC_INST_01   | Verify Apache, Tomcat, and MySQL services are running        | All services start successfully                               | ENV        |
-| 2      | UC-INST     | TC_INST_02   | Verify HTTPS via Apache reverse proxy                        | Secure login page loads without certificate warning           | ENV        |
+# QFit – User & Admin Interviews
 
 ---
 
-## 2. FR-1: Account Management
+## ✅ User Interview – Questions & Answers
 
-| Serial | Use Case ID    | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
-|--------|----------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
-| 3      | UC-FR1-Account | TC_ACC_01    | Register with valid email and password           | Account created, password stored securely            | FR1.1–1.3  |
-| 4      | UC-FR1-Account | TC_ACC_02    | Register with missing email                      | Validation error shown                               | FR1.2      |
-| 5      | UC-FR1-Account | TC_ACC_03    | Login with valid credentials                     | User redirected to dashboard                        | FR1.4–1.5  |
-| 6      | UC-FR1-Account | TC_ACC_04    | Login with incorrect password                   | Login denied                                         | FR1.5      |
-| 7      | UC-FR1-Account | TC_ACC_05    | Reset password through email verification        | Password successfully updated                       | FR1.7      |
+**Q1. How often do you work out each week?**  
+A: I usually work out around 3–5 times per week depending on my schedule.
 
----
+**Q2. How do you currently track your workouts?**  
+A: I mostly use my phone notes or sometimes I don’t track at all.
 
-## 3. FR-2: Workout Logging
+**Q3. What information is most important for you to log?**  
+A: Exercise name, sets, reps, and weight are the most important for me.
 
-| Serial | Use Case ID     | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
-|--------|------------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
-| 8      | UC-FR2-Workout  | TC_WO_01     | Log full workout entry                           | Workout saved with timestamp                         | FR2.1–2.9  |
-| 9      | UC-FR2-Workout  | TC_WO_02     | Log workout with missing exercise name           | Save blocked with validation error                   | FR2.2,2.8  |
-| 10     | UC-FR2-Workout  | TC_WO_03     | Enter negative sets or weight                    | Invalid values rejected                              | FR2.3,2.5  |
+**Q4. What motivates you to stay consistent?**  
+A: Seeing progress in charts and hitting personal goals keeps me motivated.
 
----
+**Q5. Do you prefer fast or detailed workout logging?**  
+A: I prefer fast logging with minimal typing.
 
-## 4. FR-3: Progress Tracking
+**Q6. Would reminders help improve your consistency?**  
+A: Yes, reminders after a few inactive days would be very helpful.
 
-| Serial | Use Case ID      | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
-|--------|-------------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
-| 11     | UC-FR3-Progress  | TC_PR_01     | View workout history                             | Past workouts displayed                              | FR3.1      |
-| 12     | UC-FR3-Progress  | TC_PR_02     | Filter workout history by date                   | Only selected date range displayed                  | FR3.3      |
-| 13     | UC-FR3-Progress  | TC_PR_03     | View progress chart for exercise                 | Chart renders performance trend                     | FR3.2–3.5  |
+**Q7. Do you care about viewing progress visually?**  
+A: Yes, charts showing strength and consistency are very important to me.
 
----
+**Q8. How important is privacy for your workout data?**  
+A: Very important — I want full control over who can see my data.
 
-## 5. FR-4: Goal Setting
+**Q9. Would you use biometric syncing (Google Fit / Apple Health)?**  
+A: Yes, automatic syncing would save a lot of time.
 
-| Serial | Use Case ID   | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
-|--------|---------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
-| 14     | UC-FR4-Goals  | TC_GOAL_01   | Create new fitness goal                          | Goal saved and visible                               | FR4.1      |
-| 15     | UC-FR4-Goals  | TC_GOAL_02   | Edit an existing goal                            | Goal updated                                         | FR4.2      |
-| 16     | UC-FR4-Goals  | TC_GOAL_03   | Mark goal as completed                           | Goal marked completed                               | FR4.3      |
+**Q10. Would you pay for extra features?**  
+A: Yes, I would consider paying a small student-friendly fee for advanced analytics.
 
 ---
 
-## 6. FR-5: Biometric API Integration (Google Fit / Apple Health)
+## ✅ Admin Interview – Questions & Answers
 
-| Serial | Use Case ID   | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
-|--------|---------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
-| 17     | UC-FR5-API    | TC_API_01    | Connect account to Google Fit / Apple Health     | External account linked                              | FR5.1–5.2  |
-| 18     | UC-FR5-API    | TC_API_02    | Automatic daily sync                             | Biometric data stored daily                          | FR5.3,5.6  |
-| 19     | UC-FR5-API    | TC_API_03    | Manual refresh of biometric data                | Dashboard updates immediately                       | FR5.4      |
-| 20     | UC-FR5-API    | TC_API_04    | Prevent double counting                          | No duplicate data shown                              | FR5.7      |
-| 21     | UC-FR5-API    | TC_API_05    | Disconnect health account                        | API sync stopped                                     | FR5.8      |
-| 22     | UC-FR5-API    | TC_API_06    | Handle API sync error                            | Error shown, system remains stable                  | FR5.9      |
+**Q1. What is your main responsibility as an admin?**  
+A: My main responsibility is managing users and maintaining system security.
 
----
+**Q2. Do you need access to all user profiles?**  
+A: Yes, I must be able to view all user profiles for management purposes.
 
-## 7. FR-6: Admin Features
+**Q3. Should admins be able to deactivate users?**  
+A: Yes, for security and rule enforcement.
 
-| Serial | Use Case ID   | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
-|--------|---------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
-| 23     | UC-FR6-Admin  | TC_ADM_01    | Admin views all users                            | User list visible                                    | FR6.1      |
-| 24     | UC-FR6-Admin  | TC_ADM_02    | Admin deactivates a user                        | User cannot log in                                   | FR6.2      |
-| 25     | UC-FR6-Admin  | TC_ADM_03    | Deactivated user attempts login                 | Login blocked                                        | FR6.2      |
-| 26     | UC-FR6-Admin  | TC_ADM_04    | Admin resets password                           | Password reset successful                           | FR6.3      |
-| 27     | UC-FR6-Admin  | TC_ADM_05    | Admin changes user role                         | New role applied                                    | FR6.4      |
+**Q4. Do you need access to system activity logs?**  
+A: Yes, logs are needed to detect errors and suspicious activity.
+
+**Q5. Should admins manage user roles?**  
+A: Yes, assigning roles like user and admin is very important.
+
+**Q6. Is password reset by admin necessary?**  
+A: Yes, especially if users lose access to their accounts.
+
+**Q7. Do you require visibility into API connections?**  
+A: Yes, admins should ensure API connections remain secure.
+
+**Q8. How important is data security to you?**  
+A: Extremely important — user data must be protected at all times.
+
+**Q9. Should admins monitor file uploads?**  
+A: Yes, to prevent misuse and offensive content.
+
+**Q10. What is the most important system goal for you?**  
+A: System stability, data security, and smooth performance.
