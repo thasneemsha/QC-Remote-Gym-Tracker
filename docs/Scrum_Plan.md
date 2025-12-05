@@ -129,9 +129,6 @@ Updated architecture and sequence diagrams (v2).
 | Sprint 5 | 11/29-12/5 | Back to Discovery | In progress |
 ---
  
-## Notes
- 
-- Scrum Master (Sonu) will continue managing sprint ceremonies and documentation.
-- Product Owner (Bryan) will lead AWS configuration and technical architecture.
-- Team will reconvene in next meeting to begin coding phase.
+
+
 
