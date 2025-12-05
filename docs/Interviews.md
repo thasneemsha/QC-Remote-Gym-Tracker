@@ -1,38 +1,75 @@
-User Interview Summary
+# QFit – Validation Traceability Matrix
 
-The interviewed gym users emphasized that their top priorities are simplicity and speed. Students often work out between classes and want a workout tracker that requires minimal typing and feels quick to use. Many mentioned that complicated fitness apps discourage consistent logging.
+## 1. Environment / Installation
 
-Users also expressed the need for a clean, straightforward logging flow where they can easily enter exercise name, sets, reps, weight, and optional notes without navigating multiple screens.
+| Serial | Use Case ID | Test Case ID | Description                                                  | Expected Outcome                                              | Related FR |
+|--------|-------------|--------------|--------------------------------------------------------------|----------------------------------------------------------------|------------|
+| 1      | UC-INST     | TC_INST_01   | Verify Apache, Tomcat, and MySQL services are running        | All services start successfully                               | ENV        |
+| 2      | UC-INST     | TC_INST_02   | Verify HTTPS via Apache reverse proxy                        | Secure login page loads without certificate warning           | ENV        |
 
-A recurring theme was the importance of visual progress. Users stay more motivated when they can clearly see improvements over time. They requested simple charts such as weekly training volume, personal records (PRs), and strength progression lines.
+---
 
-Many students struggle with consistency, especially during exam weeks, and said that optional inactivity reminders would help them stay on track without feeling intrusive.
+## 2. FR-1: Account Management
 
-Goal-setting was also important. Users set personal strength targets and want the app to help them create and track these goals easily.
+| Serial | Use Case ID    | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
+|--------|----------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
+| 3      | UC-FR1-Account | TC_ACC_01    | Register with valid email and password           | Account created, password stored securely            | FR1.1–1.3  |
+| 4      | UC-FR1-Account | TC_ACC_02    | Register with missing email                      | Validation error shown                               | FR1.2      |
+| 5      | UC-FR1-Account | TC_ACC_03    | Login with valid credentials                     | User redirected to dashboard                        | FR1.4–1.5  |
+| 6      | UC-FR1-Account | TC_ACC_04    | Login with incorrect password                   | Login denied                                         | FR1.5      |
+| 7      | UC-FR1-Account | TC_ACC_05    | Reset password through email verification        | Password successfully updated                       | FR1.7      |
 
-Finally, users highlighted privacy. They want full control over their workout history and prefer their data to remain private unless they choose to share it.
+---
 
-Identified Stakeholder Requirements
+## 3. FR-2: Workout Logging
 
-SR-1.1: The system shall allow users to log workouts quickly and easily.
-SR-1.2: The system shall provide visual progress charts (volume, PRs, trends).
-SR-1.3: The system shall allow users to set and track fitness goals.
-SR-1.4: The system shall send optional inactivity reminders.
-SR-1.5: The system shall maintain user privacy and allow users to control data visibility.
+| Serial | Use Case ID     | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
+|--------|------------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
+| 8      | UC-FR2-Workout  | TC_WO_01     | Log full workout entry                           | Workout saved with timestamp                         | FR2.1–2.9  |
+| 9      | UC-FR2-Workout  | TC_WO_02     | Log workout with missing exercise name           | Save blocked with validation error                   | FR2.2,2.8  |
+| 10     | UC-FR2-Workout  | TC_WO_03     | Enter negative sets or weight                    | Invalid values rejected                              | FR2.3,2.5  |
 
-Mapped Functional Requirements
+---
 
-FR-2.1: The system shall allow users to create and save workout entries.
-FR-2.2: The system shall display progress analytics such as charts and PR history.
-FR-2.3: The system shall support goal creation and progress tracking.
-FR-2.4: The system shall trigger reminder notifications after periods of inactivity.
-FR-1.6: The system shall allow users to update account and privacy settings.
+## 4. FR-3: Progress Tracking
 
+| Serial | Use Case ID      | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
+|--------|-------------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
+| 11     | UC-FR3-Progress  | TC_PR_01     | View workout history                             | Past workouts displayed                              | FR3.1      |
+| 12     | UC-FR3-Progress  | TC_PR_02     | Filter workout history by date                   | Only selected date range displayed                  | FR3.3      |
+| 13     | UC-FR3-Progress  | TC_PR_03     | View progress chart for exercise                 | Chart renders performance trend                     | FR3.2–3.5  |
 
-11/23/2025
+---
 
-As part of my testing and review responsibilities, I contributed to refining the application’s interface, providing detailed feedback on the homepage, registration form, and dashboard to enhance usability, clarity, and user interaction. For the homepage, I recommended including essential elements such as Email or Phone Number, Password, Log In, Forgot Account?, Create New Account, and ensuring clear navigation for both returning and new users.
+## 5. FR-4: Goal Setting
 
-For the registration form, I suggested a user-friendly layout with Create a New Account, It’s Quick and Easy, First Name, Last Name, Birthday, Gender (Female, Male, Custom), Mobile Number or Email, New Password, Sign Up, Already Have an Account?, and the QC Front and Back ID photos to streamline identity verification.
+| Serial | Use Case ID   | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
+|--------|---------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
+| 14     | UC-FR4-Goals  | TC_GOAL_01   | Create new fitness goal                          | Goal saved and visible                               | FR4.1      |
+| 15     | UC-FR4-Goals  | TC_GOAL_02   | Edit an existing goal                            | Goal updated                                         | FR4.2      |
+| 16     | UC-FR4-Goals  | TC_GOAL_03   | Mark goal as completed                           | Goal marked completed                               | FR4.3      |
 
-I collaborated with Thasneemsha to review these UI components, identifying potential usability issues and improvements. In today’s meeting with Bryan, I provided solutions to optimize navigation and structure, documented feedback, and ensured designs aligned with functional requirements. These contributions guided the team toward a consistent, user-focused, and secure interface, with recommendations for usability testing and responsive design validation.
+---
+
+## 6. FR-5: Biometric API Integration (Google Fit / Apple Health)
+
+| Serial | Use Case ID   | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
+|--------|---------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
+| 17     | UC-FR5-API    | TC_API_01    | Connect account to Google Fit / Apple Health     | External account linked                              | FR5.1–5.2  |
+| 18     | UC-FR5-API    | TC_API_02    | Automatic daily sync                             | Biometric data stored daily                          | FR5.3,5.6  |
+| 19     | UC-FR5-API    | TC_API_03    | Manual refresh of biometric data                | Dashboard updates immediately                       | FR5.4      |
+| 20     | UC-FR5-API    | TC_API_04    | Prevent double counting                          | No duplicate data shown                              | FR5.7      |
+| 21     | UC-FR5-API    | TC_API_05    | Disconnect health account                        | API sync stopped                                     | FR5.8      |
+| 22     | UC-FR5-API    | TC_API_06    | Handle API sync error                            | Error shown, system remains stable                  | FR5.9      |
+
+---
+
+## 7. FR-6: Admin Features
+
+| Serial | Use Case ID   | Test Case ID | Description                                      | Expected Outcome                                      | Related FR |
+|--------|---------------|--------------|--------------------------------------------------|-------------------------------------------------------|------------|
+| 23     | UC-FR6-Admin  | TC_ADM_01    | Admin views all users                            | User list visible                                    | FR6.1      |
+| 24     | UC-FR6-Admin  | TC_ADM_02    | Admin deactivates a user                        | User cannot log in                                   | FR6.2      |
+| 25     | UC-FR6-Admin  | TC_ADM_03    | Deactivated user attempts login                 | Login blocked                                        | FR6.2      |
+| 26     | UC-FR6-Admin  | TC_ADM_04    | Admin resets password                           | Password reset successful                           | FR6.3      |
+| 27     | UC-FR6-Admin  | TC_ADM_05    | Admin changes user role                         | New role applied                                    | FR6.4      |
